@@ -1,30 +1,29 @@
-# Duplicate Question Detection
+# Parkinson's Disease Prediction Using Machine Learning
 
 ## Overview
-This project detects duplicate questions using Natural Language Processing (NLP) and Machine Learning techniques to improve search relevance on Q&A platforms.
+This project predicts the likelihood of Parkinson's disease in patients based on biomedical voice measurements.  
+It leverages Machine Learning techniques to assist in early detection, which is critical for timely treatment.
+
+---
 
 ## Dataset
-- Source: Quora Question Pairs Dataset (or similar)
-- Columns: Question1, Question2, and Label (1 for duplicate, 0 for non-duplicate)
+- **Source:** UCI Machine Learning Repository - Parkinson’s Disease Dataset
+- Contains biomedical voice measurements from healthy and Parkinson's-affected individuals.
+- Features: 22 attributes including vocal fundamental frequency, amplitude variation, and noise-to-harmonics ratio.
 
-## Workflow
-### Data Preprocessing
-- Text cleaning, tokenization, lemmatization
-- Removal of stopwords and special characters
+---
 
-### Feature Engineering
-- TF-IDF representation
-- Word2Vec embeddings
-- Fuzzy string similarity scores
+## Project Workflow
+### 1. Exploratory Data Analysis (EDA)
+- Visualized data distribution using Matplotlib, Seaborn, and Plotly.
+- Identified patterns and correlations between features and disease labels.
 
-### Model Training
-- XGBoost and Random Forest classifiers
-- Ensemble learning for improved accuracy
-- Achieved 92% accuracy
+### 2. Data Preprocessing
+- Handled missing values and outliers.
+- Performed feature scaling and normalization.
+- Addressed class imbalance using **SMOTE** from imbalanced-learn.
 
-## Installation
-```bash
-git clone https://github.com/username/duplicate-question-detection.git
-cd duplicate-question-detection
-pip install -r requirements.txt
-# Parkinson-s-diseases_prediction
+### 3. Model Training & Evaluation
+- Applied multiple ML models: Logistic Regression, Random Forest, Gradient Boosting, and Ensemble methods.
+- Compared performance using Accuracy, Precision, Recall, F1-score, and ROC-AUC metrics.
+- Achieved **92% accuracy** on test data.
